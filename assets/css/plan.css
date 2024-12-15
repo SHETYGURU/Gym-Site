@@ -1,0 +1,156 @@
+/* Pricing Plans Section */
+.pricing-plans {
+    gap: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 64px;
+    font-family: "Open Sans", sans-serif;
+    background: 
+      linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1), /* Fully black at the top */
+        rgba(0, 0, 0, 0.7) 70%, /* Darker towards the bottom */
+        rgba(0, 0, 0, 0.9) 100% /* Fully dark at the bottom */
+      ),
+      url('/assets/img/plan/plan.jpg') center center / cover no-repeat; /* Background image */
+    position: relative;
+    background-attachment: fixed; /* Ensures smooth parallax scrolling if desired */
+  }
+  
+  /* Black fade overlay for added contrast */
+  .pricing-plans::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5); /* Slight vignette for focus */
+    z-index: -1;
+  }
+  
+  
+  /* Pricing Card Styles */
+  .pricing-card {
+    --col: #e4e4e7;
+    position: relative;
+    min-width: 360px;
+    padding: 32px;
+    padding-bottom: 96px;
+    border-radius: 8px;
+    border: 1px solid #262626;
+    background-color: rgba(38, 38, 38, 0); /* Slightly darker transparent background */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    backdrop-filter: blur(10px); /* Glass effect */
+    transition: all 0.5s ease;
+  }
+  
+  /* Hover Effect for Pricing Card */
+  .pricing-card:hover {
+    border-color: var(--col);
+    background-color: rgba(38, 38, 38, 0.9); /* Darker on hover */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+    transform: translateY(-16px) scale(1.02); /* Slight lift and scale on hover */
+  }
+  
+  /* Space between elements inside the card */
+  .pricing-card > *:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  
+  /* Card Type Heading */
+  .pricing-card .heading h4 {
+    padding-bottom: 12px;
+    color: var(--col);
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Subtext under the heading */
+  .pricing-card .heading p {
+    color: #a3a3a3;
+    font-size: 14px;
+    font-weight: lighter;
+  }
+  
+  /* Pricing Display */
+  .pricing-card .price {
+    position: relative;
+    color: var(--col);
+    font-size: 60px;
+    font-weight: bold;
+  }
+  
+  /* Small text below price */
+  .pricing-card .price sub {
+    position: absolute;
+    bottom: 14px;
+    color: #a3a3a3;
+    font-size: 14px;
+    font-weight: lighter;
+  }
+  
+  /* Feature List */
+  .pricing-card .features li {
+    padding-bottom: 16px;
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: lighter;
+    text-align: left;
+  }
+  
+  /* Styling for icons or bold text in features */
+  .pricing-card .features li i,
+  .pricing-card .features li strong {
+    color: #e4e4e7;
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  /* Space before bold text in features */
+  .pricing-card .features li strong {
+    padding-left: 24px;
+  }
+  
+  /* Call-to-Action Button */
+  .pricing-card .cta-btn {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid var(--col);
+    background-color: var(--col);
+    color: #e4e4e7;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  /* Active state for Call-to-Action Button */
+  .pricing-card .cta-btn:active {
+    background-color: transparent;
+    color: var(--col);
+    transition: all 0.3s ease;
+  }
+  
+  /* Card Type Colors */
+  .pricing-card.basic {
+    --col: #0891b2; /* Blue color */
+  }
+  
+  .pricing-card.standard {
+    --col: #059669; /* Green color */
+  }
+  
+  .pricing-card.premium {
+    --col: #c026d3; /* Purple color */
+  }
+  
