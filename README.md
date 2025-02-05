@@ -13,7 +13,7 @@ This is a fully responsive Gym Website built with modern web technologies. It fe
 
 ## Live Demo
 
-Check out the live website here: [Gym Website Live](https://your-live-link.com)
+Check out the live website here: [Gym Website Live](https://gymsitepage.netlify.app/)
 
 ## Technologies Used
 
